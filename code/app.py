@@ -1452,7 +1452,7 @@ age = col_age.number_input(
     "나이",
     min_value=0,
     max_value=120,
-    value=57,
+    value=25,
     step=1
 )
 
