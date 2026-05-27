@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local data and outputs - do not upload sensitive files
+/data/*
+!/data/.gitkeep
+!/data/knhanes/.gitkeep
+/output/*
+!/output/.gitkeep
+
+# Raw or sensitive files
+*.sas7bdat
+*.xpt
+*.csv
+*.xlsx
+*.xls
+*.pdf
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit local secrets
+.streamlit/secrets.toml

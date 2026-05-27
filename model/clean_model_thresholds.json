@@ -1,0 +1,306 @@
+{
+  "target_anemia": {
+    "target_name_kr": "빈혈 위험",
+    "definition": "남자 혈색소 <13 또는 여자 혈색소 <12",
+    "recommended_strategy": "balanced",
+    "threshold": 0.25,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "weight",
+      "waist",
+      "BMI",
+      "systolic_bp",
+      "diastolic_bp",
+      "fasting_glucose",
+      "HbA1c",
+      "total_cholesterol",
+      "HDL",
+      "triglyceride",
+      "LDL",
+      "AST",
+      "ALT",
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "removed_features": [
+      "hemoglobin"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_anemia_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  },
+  "target_ckd": {
+    "target_name_kr": "만성신장질환 위험",
+    "definition": "계산 eGFR <60 또는 요단백 코드 >=2",
+    "recommended_strategy": "recall_70",
+    "threshold": 0.11,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "weight",
+      "waist",
+      "BMI",
+      "systolic_bp",
+      "diastolic_bp",
+      "fasting_glucose",
+      "HbA1c",
+      "total_cholesterol",
+      "HDL",
+      "triglyceride",
+      "LDL",
+      "AST",
+      "ALT",
+      "hemoglobin"
+    ],
+    "removed_features": [
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_ckd_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  },
+  "target_diabetes": {
+    "target_name_kr": "당뇨병 위험",
+    "definition": "공복혈당 >=126 또는 HbA1c >=6.5",
+    "recommended_strategy": "recall_70",
+    "threshold": 0.29,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "weight",
+      "waist",
+      "BMI",
+      "systolic_bp",
+      "diastolic_bp",
+      "total_cholesterol",
+      "HDL",
+      "triglyceride",
+      "LDL",
+      "AST",
+      "ALT",
+      "hemoglobin",
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "removed_features": [
+      "fasting_glucose",
+      "HbA1c"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_diabetes_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  },
+  "target_dyslipidemia": {
+    "target_name_kr": "이상지질혈증 위험",
+    "definition": "총콜레스테롤 >=240 또는 LDL >=160 또는 TG >=200 또는 HDL <40",
+    "recommended_strategy": "best_f1",
+    "threshold": 0.37,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "weight",
+      "waist",
+      "BMI",
+      "systolic_bp",
+      "diastolic_bp",
+      "fasting_glucose",
+      "HbA1c",
+      "AST",
+      "ALT",
+      "hemoglobin",
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "removed_features": [
+      "total_cholesterol",
+      "HDL",
+      "triglyceride",
+      "LDL"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_dyslipidemia_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  },
+  "target_hypertension": {
+    "target_name_kr": "고혈압 위험",
+    "definition": "수축기혈압 >=140 또는 이완기혈압 >=90",
+    "recommended_strategy": "recall_70",
+    "threshold": 0.28,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "weight",
+      "waist",
+      "BMI",
+      "fasting_glucose",
+      "HbA1c",
+      "total_cholesterol",
+      "HDL",
+      "triglyceride",
+      "LDL",
+      "AST",
+      "ALT",
+      "hemoglobin",
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "removed_features": [
+      "systolic_bp",
+      "diastolic_bp"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_hypertension_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  },
+  "target_liver_dysfunction": {
+    "target_name_kr": "지방간/간기능 이상 위험",
+    "definition": "AST >40 또는 ALT >35",
+    "recommended_strategy": "balanced",
+    "threshold": 0.22,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "weight",
+      "waist",
+      "BMI",
+      "systolic_bp",
+      "diastolic_bp",
+      "fasting_glucose",
+      "HbA1c",
+      "total_cholesterol",
+      "HDL",
+      "triglyceride",
+      "LDL",
+      "hemoglobin",
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "removed_features": [
+      "AST",
+      "ALT"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_liver_dysfunction_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  },
+  "target_metabolic_syndrome": {
+    "target_name_kr": "대사증후군 위험",
+    "definition": "대사증후군 구성요소 5개 중 3개 이상",
+    "recommended_strategy": "best_f1",
+    "threshold": 0.52,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "weight",
+      "BMI",
+      "HbA1c",
+      "total_cholesterol",
+      "LDL",
+      "AST",
+      "ALT",
+      "hemoglobin",
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "removed_features": [
+      "waist",
+      "triglyceride",
+      "HDL",
+      "systolic_bp",
+      "diastolic_bp",
+      "fasting_glucose"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_metabolic_syndrome_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  },
+  "target_obesity": {
+    "target_name_kr": "비만 위험",
+    "definition": "BMI >=25",
+    "recommended_strategy": "best_f1",
+    "threshold": 0.49,
+    "features": [
+      "age",
+      "sex_code",
+      "female",
+      "male",
+      "height",
+      "waist",
+      "systolic_bp",
+      "diastolic_bp",
+      "fasting_glucose",
+      "HbA1c",
+      "total_cholesterol",
+      "HDL",
+      "triglyceride",
+      "LDL",
+      "AST",
+      "ALT",
+      "hemoglobin",
+      "creatinine",
+      "eGFR_calc",
+      "urine_protein"
+    ],
+    "removed_features": [
+      "BMI",
+      "weight"
+    ],
+    "model_file": "C:\\Users\\Owner\\Desktop\\보건의료빅데이터 공모전\\model\\target_obesity_clean.pkl",
+    "display_grade_rule": {
+      "high": 0.7,
+      "moderate": 0.4,
+      "low": 0.0
+    }
+  }
+}
